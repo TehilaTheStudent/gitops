@@ -6,7 +6,6 @@ spec:
   type: NodePort
   ports:
     - port: {{ .Values.frontend.port }}
-      targetPort: {{ .Values.frontend.port }}
-      nodePort: {{ .Values.frontend.nodePort }}
+      targetPort: {{ .Values.frontend.targetPort }}
   selector:
-    app: skillcode-frontend-pod
+    app: frontend

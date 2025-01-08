@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: skillcode-frontend-pod
+      app: frontend
   template:
     metadata:
       labels:
-        app: skillcode-frontend-pod
+        app: frontend
     spec: # pod spec
       containers:
       - name: frontend-container
@@ -19,4 +19,4 @@ spec:
         - containerPort: {{ .Values.frontend.port }}
         env:
         - name: BACKEND_URL
-          value: {{ .Values.frontend.backendUrl | quote }}
+          value: {{ .Values.frontend.backendUrl | quota }}
