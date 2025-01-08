@@ -19,4 +19,4 @@ spec:
         - containerPort: {{ .Values.frontend.port }}
         env:
         - name: BACKEND_URL
-          value: {{ .Values.frontend.backendUrl | quota }}
+          value: {{ .Values.frontend.backendUrl | quote }}
