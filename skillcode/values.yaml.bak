@@ -1,7 +1,0 @@
-frontend:
-  image: "swr.ap-southeast-3.myhuaweicloud.com/skillcode/frontend:{{ .Values.imageTag }}"
-  port: 3000
-  targetPort: 4000
-  backendUrl: ""
-  imageTag: "main"
-
