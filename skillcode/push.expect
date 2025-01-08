@@ -1,0 +1,22 @@
+#!/usr/bin/expect -f
+
+# Get the repository URL from the command line argument
+set repo_url [lindex $argv 0]
+
+# Set up the username and password
+set username "hwstaff_pub_TRCCloudTeam/itai_gendler"
+set password [lindex $argv 1]
+
+# Run the git command with the provided repo URL
+spawn git push $repo_url
+
+# Expect the username prompt and send the username
+expect "Username for 'https://codehub.devcloud.ap-southeast-3.huaweicloud.com': "
+send "$username\r"
+
+# Expect the password prompt and send the password
+expect "Password for 'https://hwstaff_pub_TRCCloudTeam/itai_gendler@codehub.devcloud.ap-southeast-3.huaweicloud.com': "
+send "$password\r"
+
+# Wait for the process to complete
+expect eof
