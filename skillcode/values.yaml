@@ -3,4 +3,4 @@ frontend:
   port: 3000
   targetPort: 4000
   backendUrl: ""
-  imageTag: "new_name"
+  imageTag: "main"
