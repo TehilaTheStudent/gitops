@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
+  namespace: skillcode-{{ .Values.metadata  }}
 spec:
   replicas: 1
   selector:
@@ -9,6 +10,7 @@ spec:
       app: frontend
   template:
     metadata:
+      namespace: skillcode-{{ .Values.metadata  }}
       labels:
         app: frontend
     spec: # pod spec
