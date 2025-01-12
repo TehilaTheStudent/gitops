@@ -4,7 +4,7 @@ metadata:
   name: frontend
   namespace: skillcode-{{ .Values.metadata  }}
 spec:
-  replicas: {{ .Values.replicas }}
+  replicas: {{ .Values.frontend.replicas }}
   selector:
     matchLabels:
       app: frontend
