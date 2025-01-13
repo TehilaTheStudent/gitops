@@ -4,5 +4,5 @@ frontend:
   targetPort: 3000
   backendUrl: ""
   imageTag: "main"
-  replicas: 2
+  replicas: 1
 metadata: "helm"
